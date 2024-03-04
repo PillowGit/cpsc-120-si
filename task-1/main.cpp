@@ -4,6 +4,7 @@
 // Write a function called "PrintString" that:
 // 1. Takes in a string by reference
 // 2. Prints the string
+// 3. Clears the string when we're done with it
 
 int main(int argc, char *argv[]) {
   // TODO:
