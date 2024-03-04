@@ -4,6 +4,8 @@ We are now going to demonstrate using a header file!
 
 Reuse your function from `task-1` in this file.
 
+**Note:** Files ending in `.h` and `.hpp` are header files for C++. `.h` is used for C but works for C++ code as well, while `.hpp` is used for C++ code only.
+
 ## Tasks:
 
 1. Move the `PrintString` function from task-1 into the header file declared here

@@ -16,5 +16,8 @@ int main(int argc, char *argv[]) {
   // TODO:
   // Call the PrintString function
 
+  // TODO:
+  // Call it again to demonstrate how the string is cleared when passed by reference
+
   return 0;
 }
