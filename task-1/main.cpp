@@ -1,23 +1,24 @@
-#include <iostream>
+// Importing utility functions
+#include "../utils/funcs.hpp"
+// funcs.hpp includes things like:
+// 
+// void PrintVector(std::vector<int> numbers);
 
-// TODO:
-// Write a function called "PrintString" that:
-// 1. Takes in a string by reference
-// 2. Prints the string
-// 3. Clears the string when we're done with it
 
-int main(int argc, char *argv[]) {
-  // TODO:
-  // Declare a string variable
+// Step 1:
+// Include the vector header here
 
-  // TODO:
-  // Get the value of the string variable from the user
 
-  // TODO:
-  // Call the PrintString function
+int main() {
+    // Step 2:
+    // Create a vector of integers
+    // Use the {} initializer to initialize it with some numbers
 
-  // TODO:
-  // Call it again to demonstrate how the string is cleared when passed by reference
 
-  return 0;
+    // Step 3:
+    // Call the PrintVector function to see the results
+    // Note that cout << std::vector<int>; will not work, you need to use the PrintVector function
+
+
+    return 0;
 }
