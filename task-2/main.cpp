@@ -1,38 +1,69 @@
-// Importing utility functions
-#include "../utils/funcs.hpp"
-// funcs.hpp includes things like:
-// 
-// void PrintVector(std::vector<int> numbers);
-// bool HasName(std::vector<std::string> names, std::string name);
-
-
-// Step 1:
-// Include the vector & string headers here
-
+#include <iostream>
+#include <functional>
 
 int main() {
-    // Step 2:
-    // Create a vector of strings
-    // This vector will be empty at first
+
+    // Case 1:
+    // Avoid large condition blocks
+
+    int hour{14};
+    std::string day{"saturday"};
+
+    if (day == "monday" ||
+        day == "tuesday" ||
+        day == "wednesday" ||
+        day == "thursday" ||
+        day == "friday") {
+        if (hour >= 9 && hour <= 17) {
+            std::cout << "Open" << std::endl;
+        } else {
+            std::cout << "Closed" << std::endl;
+        }
+    } else {
+        std::cout << "Closed" << std::endl;
+    }
+    
+    // How would you write this more efficiently?
 
 
-    // Step 3:
-    // Create 3 empty strings
+    // Case 2:
+    // Avoid using a condition to return a condition
+
+    // Ignore the silly function syntax, worry about the code in the lines
+    std::function <bool(int)> is_even = [](int x) {
+        // ---------------------------------------------------------------------
+        if (x % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+        // ---------------------------------------------------------------------
+    };
+
+    // How might you write this more efficiently?
+
+    std::function <bool(int)> is_even2 = [](int x) {
+        // ---------------------------------------------------------------------
+        return 0;
+        // ---------------------------------------------------------------------
+    };
+
+    std::cout << is_even(4) << std::endl;
+    std::cout << is_even2(4) << std::endl;
 
 
-    // Step 4:
-    // Ask the user for 3 names and store them in the empty strings
+    // Case 3:
+    // Avoid using the logical ! operator if it's not necessary
 
+    float grade{78.5};
 
-    // Step 5:
-    // Add the 3 names to the vector (hint: push_back())
+    if (!(grade < 70)) {
+        std::cout << "You have above a 70%, you pass" << std::endl;
+    } else {
+        std::cout << "You have below a 70%, you fail" << std::endl;
+    }
 
-
-    // Step 6:
-    // Check if the user put the name "Andrew" in the vector
-    // Use an if statement and the funcs.hpp function "HasName" to check this
-    // You can print whatever you want if they do or don't have the name required
-
+    // How should you write this so it's more clear
 
     return 0;
 }
